@@ -1,0 +1,43 @@
+{% extends 'Admin_Basic.html' %}
+    {% load static %}
+{% block content %}
+ <div class="container">
+    <div class="row">
+     <div class="col-lg-12">
+        <form action="/GUE_Admin123/pdtreg" name="pdttreg" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <center>
+            <h2>Product Registration</h2>
+            <div class="form-group col-lg-4">
+                Product Name : <input type="text" name="pdtname" required class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                Image:<input type="file" name="pdtimage" required class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                 Price:<input type="text" name="pdtprice" required class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                Tax: <input type="text" name="pdttax" class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                Quality:<input type="text" name="pdtquality" class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                Status:<input type="text" name="pdtstatus" class="form-control">
+            </div>
+            <div class="form-group col-lg-4">
+                Category:<input type="text" name="category" class="form-control">
+            </div>
+                <br>
+            <div class="form-group col-lg-4">
+                <input type="submit" name="submit" value="SAVE">
+            </div>
+        <h2>{{reg}}</h2>
+            </center>
+            </form>
+        </div>
+    </div>
+ </div>
+{% endblock %}
+

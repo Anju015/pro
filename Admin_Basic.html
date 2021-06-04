@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <title></title>
+    <style>
+    .nav a{
+    display:block;
+    position:relative;
+    width:100%;
+    margin-bottom:5px;
+    left:5px;
+    border-radius: 0px 12px 12px 0px;
+    background-color: #0a58ca80;
+    letter-spacing:2px;
+    color:white;
+    }
+     .nav a:hover{
+    display:block;
+    position:relative;
+    width:100%;
+    margin-bottom:5px;
+    left:5px;
+    border-radius: 0px 12px 12px 0px;
+    background-color:white;
+    letter-spacing:2px;
+    color:#41464b;
+    }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'pics/g2.jpg' %}" alt=" " width="100px" height="80px" class="d-inline-block align-text-top">
+      GUE Oman
+    </a>
+  </div>
+</nav>
+<div class="container-fulid">
+    <div class="row">
+        <div class="col-lg-3 " style="background-color: #41464b; height:550px;">
+            <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="/GUE_Admin123/home">Home</a>
+                <a class="nav-link" href="/GUE_Admin123/empreg">Employee Registration</a>
+                <a class="nav-link" href="/GUE_Admin123/pdtreg">Product Registration</a>
+               <!--  <a class="nav-link" href="/GUE_Admin123/empdvw">Employee List</a>
+                <a class="nav-link" href="/GUE_Customer/viewcustomer">Customer Details</a>
+                <a class="nav-link" href="/GUE_Admin123/supdvw">Supplier Details</a>-->
+                <a class="nav-link" href="/GUE_Admin123/supreg">Supplier Registration</a>
+                <a class="nav-link" href="/GUE_Admin123/stockqty">Stock Add</a>
+</nav>
+            {{msg}}
+        </div><!--left end -->
+        <div class="col-lg-9">
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+    </div> <!-- mainrow end -->
+</div>
+<script src="{% static 'bootstrap/js/bootstrap.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+</head>
+<body>
+    {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+</head>
+<body>
+<center>
+    <form action="/empreg" name="empreg" method="post">
+        {% csrf_token %}
+            <h2>Buy Product</h2>
+            <h3>Product Id : <input type="text" name="pdtid" required><br><br>
+            Product Name :<input type="text" name="pdtname" required> <br><br>
+            Purchase Amount:<input type="text" name="amnt" required> <br><br>
+            Quantity:<input type="text" name="qty"><br><br>
+            Tax:<input type="text" name="tax"><br><br>
+        <br>
+            Date:<input type="date" name="dtime"><br><br>
+            Supplier Name :<input type="text" name="suppname"><br><br>
+            <input type="submit" name="submit" value="Submit"></h3>
+        <h2>{{reg}}</h2>
+
+    </form>
+
+</center>
+</body>
+</html>

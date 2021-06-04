@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<center>
+    <form action="/reg" name="form1" method="post">
+        {% csrf_token %}
+            <h2>Login</h2><br><br>
+            User Type:<select>
+                        <option>Admin</option>
+                        <option>Employee</option>
+                        <option>Customer</option>
+                        <option>Supplier</option>
+                      </select>
+        <br><br>
+            User name:<input type="text" name="uname"><br>
+            Password:<input type="password" name="pass"><br>
+            <input type="submit" name="submit" value="Submit">
+        <h2>{{reg}}</h2>
+
+    </form>
+</center>
+<a href="/vi">View Registered</a>
+</body>
+</html>
